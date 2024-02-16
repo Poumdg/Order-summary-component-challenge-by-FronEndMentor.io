@@ -51,6 +51,7 @@ body {
     font-family: var(--ff-all);
     max-height: 100%;
     max-width: 100% ;
+    /* overflow: hidden; */
 
 }
 
@@ -59,11 +60,12 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-height: 85%;
 }
 .dancing-image {
     width: 100%;
     border-radius: 15px 15px 0 0;
-    max-height: 30% ;
+    max-height: 100% ;
 }
 /* Wrapper styling */
 .wrapper {
@@ -71,7 +73,6 @@ main {
     flex-direction: column;
     align-items: center;
     width: 25rem;
-    height: 40rem;
     background-color: rgb(209, 210, 215);
     border-radius: 15px;
 }
@@ -82,10 +83,8 @@ main {
     grid-template-rows: repeat(4, 1fr);
     align-items: center;
     width: 20rem;
-    max-height: 60%;
     background-color: rgb(209, 210, 215);
     border-radius: 5px;
-    margin-top: 2rem;
 }
 .title {
     font-size: var(--fs-big);
@@ -98,6 +97,7 @@ main {
     grid-area: 2/1/3/2;
     max-width: 100%;
     height: 100%;
+    margin-bottom: 1rem;
     font-size: var(--fs-small);
     text-align: center;
     align-self: center;
@@ -116,11 +116,11 @@ main {
     background-color: var(--clr-pale-blue);
     color: rgb(22, 20, 20);
     border-radius: 20px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
     white-space: nowrap;
+  }
     
-}
 .music-image {
     grid-area: 2 / 1 / 4 / 2;
     justify-self: center;
@@ -162,22 +162,18 @@ main {
     grid-area: 4/1/5/2;
     display: grid;
     height: 100%;
-    width: 100%;
     grid-template-columns: minmax(10rem, 20rem);
     grid-template-rows: repeat(2, 1fr) ;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
 }
 .pay {
     height: 100%;
-    width: 100%;
     padding: 0.5rem;
     background-color: var(--clr-bright-blue);
     color: var(--clr-pale-blue);
     font-size: var(--fs-xtra-small);
     font-weight: var(--fw-medium);
     border-radius: 10px;
-    align-self: self-start;
+    /* align-self: self-start; */
     border: none;
     cursor: pointer;
     transition: ease 200ms;
@@ -203,15 +199,7 @@ main {
     color: var(--clr-dark-blue);
     transition: ease 200ms;
 }
-.attribution {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    font-size: 1rem;
-    z-index: -1;
-}
+
 
 @media (max-width: 375px){
     .wrapper {
@@ -223,7 +211,6 @@ main {
         width: var(--col-size-small);
     }
     .title {
-        margin-top: 2rem;
         font-size: var(--fs-small);
     }
     .description {
@@ -232,11 +219,11 @@ main {
         font-size: var(--fs-xtra-small);
     }
     .music-image {
-        height: 40px;
+        height: 100%;
     }
     .plan {
         font-size: small;
-        max-height: 100%;
+        height: 100%;
         white-space: nowrap;
     }
     .price {
@@ -246,19 +233,11 @@ main {
         font-size: small;
     }
     /* buttons styling */
-    .button{ 
-        gap: 1rem;
-    }
     .pay {
         font-size:medium;
         max-height: 100%;
-        padding: .5rem;
     }
     .cancel {
         font-size: medium;
     } 
-    .attribution {
-        font-size: small;
-        z-index: -1;
-    }
 }
